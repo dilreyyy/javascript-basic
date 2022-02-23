@@ -43,3 +43,19 @@ button{
     margin-top: 0.8rem;
     color: rgb(223, 223, 223);
 }
+
+span.warning{
+    color: rgb(214, 114, 75);
+}
+
+input.warning{
+    background-color: rgb(214, 114, 75);
+}
+
+input.error{
+    background-color: rgb(236, 65, 59);
+}
+
+span.error{
+    color: rgb(236, 65, 59);
+}

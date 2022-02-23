@@ -11,10 +11,22 @@ txtInput.addEventListener('input', validateInput);
 function validateInput(event){
     let inputLength = event.target.value.length;
     countLength.textContent = txtInput.maxLength - inputLength;
-    if(countLength.textContent == 10){
-        txtInput.style.backgroundColor = "red";
+
+    if(countLength.textContent <= 10 && countLength.textContent != 0){
+        txtInput.classList.add("warning");
+        countLength.classList.add("warning");
+        txtInput.classList.remove("error");
+        countLength.classList.remove("error");
+    }else if(countLength.textContent == 0){
+        txtInput.classList.add("error");
+        countLength.classList.add("error");
+        txtInput.classList.remove("warning");
+        countLength.classList.remove("warning");
     }else{
-        txtInput.style.backgroundColor = "rgb(52, 136, 136);";
+        txtInput.classList.remove("warning");
+        countLength.classList.remove("warning");
+        txtInput.classList.remove("error");
+        countLength.classList.remove("error");
     }
     
 }
